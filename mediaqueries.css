@@ -1,3 +1,4 @@
+/* ----------- Large Screens (<=1400px) ----------- */
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -12,6 +13,7 @@
   }
 }
 
+/* ----------- Tablets (<=1200px) ----------- */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
@@ -44,8 +46,6 @@
   }
   .about-containers {
     margin-top: 0;
-  }
-  .about-containers {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -53,13 +53,16 @@
   }
 }
 
+/* ----------- Mobiles (<=600px) ----------- */
 @media screen and (max-width: 600px) {
   #contact,
   footer {
-    height: 40vh;
+    height: auto;
+    padding-bottom: 2rem;
   }
   #profile {
-    height: 83vh;
+    height: auto; /* Better than fixed vh */
+    padding-bottom: 2rem;
     margin-bottom: 0;
   }
   article {
@@ -105,5 +108,23 @@
   }
   .text-container {
     text-align: justify;
+  }
+
+  /* 🔹 Project & Certificates cards full width on mobile */
+  .details-container {
+    width: 100%;
+  }
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 🔹 Improve hamburger icon sizing */
+  .hamburger-menu {
+    margin-top: 0.5rem;
+  }
+  .hamburger-icon span {
+    width: 25px;
+    height: 3px;
   }
 }
